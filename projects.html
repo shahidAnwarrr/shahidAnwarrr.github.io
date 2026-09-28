@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects | Shahid Anwar</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <div class="avatar">SA</div>
+    <div class="header-text">
+      <h1>Shahid Anwar</h1>
+      <p class="role">Data Scientist | Machine Learning Engineer | AI Researcher &mdash; Glasgow, United Kingdom</p>
+    </div>
+  </div>
+  <nav class="site-nav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="projects.html" class="active">Projects</a></li>
+      <li><a href="publications.html">Publications</a></li>
+      <li><a href="experience.html">Experience</a></li>
+      <li><a href="education.html">Education</a></li>
+      <li><a href="cv.html">CV</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <div class="wrap">
+    <p class="lede">Selected data science and research projects, spanning computer vision, unsupervised anomaly detection and reproducible model evaluation.</p>
+
+    <h2 id="panda">Prostate Cancer Histopathology Classification &mdash; PANDA Dataset</h2>
+    <div class="card">
+      <div class="meta">Computer Vision &middot; CNN &middot; ViT-B/16 &middot; GCViT-Tiny &middot; PyTorch</div>
+      <div class="tag-row">
+        <span class="tag">Computer Vision</span>
+        <span class="tag">Vision Transformers</span>
+        <span class="tag">Grad-CAM</span>
+        <span class="tag">PyTorch</span>
+      </div>
+      <ul class="bullets">
+        <li>Built a reproducible image-classification pipeline on 10,616 histopathology images using stratified train, validation and test splits to prevent data leakage.</li>
+        <li>Benchmarked a CNN, Vision Transformer (ViT-B/16) and GCViT-Tiny under controlled experimental settings.</li>
+        <li>Mitigated class imbalance and overfitting with class-weighted cross-entropy, label smoothing, OneCycleLR scheduling and early stopping; used mixed-precision training for GPU efficiency.</li>
+        <li>Achieved test accuracy of 0.7872 (CNN) and 0.7994 (ViT-B/16); evaluated multiclass performance with macro F1, confusion matrices and quadratic weighted kappa.</li>
+        <li>Applied Grad-CAM to audit which image regions drove predictions, validating model reasoning and interpretability.</li>
+      </ul>
+    </div>
+
+    <h2 id="ids">Adaptive Anomaly-Based Intrusion and Ransomware Detection Framework</h2>
+    <div class="card">
+      <div class="meta">Unsupervised Learning &middot; Ensemble Learning &middot; CICIDS2017 &middot; UNSW-NB15 &middot; scikit-learn</div>
+      <div class="tag-row">
+        <span class="tag">Anomaly Detection</span>
+        <span class="tag">Ensemble Learning</span>
+        <span class="tag">Cybersecurity Analytics</span>
+        <span class="tag">scikit-learn</span>
+      </div>
+      <ul class="bullets">
+        <li>Designed a lightweight unsupervised ensemble combining Isolation Forest, Local Outlier Factor and One-Class SVM with adaptive thresholding.</li>
+        <li>Developed end-to-end preprocessing, training and evaluation workflows across network-intrusion and ransomware datasets.</li>
+        <li>Recorded 0.99924 accuracy with random forest on CICIDS2017 and 0.9958 with logistic regression on UNSW-NB15, and scrutinised near-perfect scores for leakage and dataset bias.</li>
+        <li>Evaluated true generalisation with leave-family-out testing, achieving 0.8909 macro accuracy across unseen ransomware families.</li>
+        <li>Assessed robustness and operational trade-offs using classification reports, ROC analysis, confusion matrices and comparative experiments.</li>
+      </ul>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    &copy; <span id="year"></span> Shahid Anwar. Built with plain HTML &amp; CSS.
+  </div>
+</footer>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
